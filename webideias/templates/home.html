@@ -1,0 +1,25 @@
+{% extends 'shared/layout.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<form action="/webideias/templates/index.html" method="post">
+    {% csrf_token %}
+    <a href="index">
+        Cadastre-se
+    </a>
+</form>    
+<form action="/webideias/templates/login.html" method="post">
+    {% csrf_token %}
+    <a href="login">
+        Já é Cadastrado?
+    </a>
+</form>  
+<form action="/webideias/templates/sobre.html" method="post">
+    {% csrf_token %}
+    <a href="sobre">
+        Conheça nossas ideias
+    </a>
+</form>
+
+{% endblock %}
